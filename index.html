@@ -6,10 +6,11 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/mystyle.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/mystyle.scss" media="screen" />
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Lato", sans-serif; background-image: url(img/cover.jpg);}
 .mySlides {display: none}
+
 </style>
 <body>
 
@@ -19,14 +20,15 @@ body {font-family: "Lato", sans-serif}
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="#info" class="w3-bar-item w3-button w3-padding-large w3-hide-small">INFO</a>
-    <a href="#group" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Group</a>
+    <a href="#group" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
+        <a href="#" class="w3-bar-item w3-button">Mechanical</a>
+        <a href="#" class="w3-bar-item w3-button">Electrical</a>
+        <a href="#" class="w3-bar-item w3-button">Software/Control</a>
+        <a href="#" class="w3-bar-item w3-button">Blog</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -44,13 +46,13 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="img/cover.png" style="width:80%">
+<!--   <div class="mySlides w3-display-container w3-center">
+    <img src="img/cover.jpg" style="height:40%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>University of Waterloo</h3>
       <p><b>We are the best fourth year design project group</b></p>   
     </div>
-  </div>
+  </div> -->
 <!--   <div class="mySlides w3-display-container w3-center">
     <img src="/cover.png" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
@@ -65,12 +67,27 @@ body {font-family: "Lato", sans-serif}
       <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
     </div>
   </div> -->
+  <div class="cover">
+    <img src="img/cover2.jpg" >
+    <div class="headerText">
+      MotoHUD
+    </div>
+    
+    <div class="headerDes">
+     Motorcycle Headsup Display 
+    </div>
+  </div>
 
   <!-- The info Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="info">
-    <h2 class="w3-wide">Group 17 Project</h2>
-    <p class="w3-opacity"><i>Motorcycle Headsup Display</i></p>
-    <p class="w3-justify">With the lack of driver assistance technology on motorcycles, motorcyclists have to take their attention off the road in front of them to get key information.  Examples of this include turning around to look behind to view surroundings, focusing on a dashboard that is hard to see due to reflections from the sun and using external equipment like a GPS.  All of these lower the chance of reacting to dangers ahead and increase the chances of an accident.   </p>
+  <div class="aboutSection" id="info">
+    <div class="infoTitle">About</div>
+    <div class="aboutSectionText">With the lack of driver assistance technology on motorcycles, motorcyclists have to take their attention off the road in front of them to get key information.  Examples of this include turning around to look behind to view surroundings, focusing on a dashboard that is hard to see due to reflections from the sun and using external equipment like a GPS.  All of these lower the chance of reacting to dangers ahead and increase the chances of an accident. 
+    <br/>
+    <br>
+    Given the stated problem, there is a need to provide a motorcyclist easily visible information so that they can keep their attention on the road.  This would reduce the need for riders to take their attention off the road which is the problem that has been identified.
+    </br>
+    </div>
+    
   
   </div>
 
@@ -79,32 +96,38 @@ body {font-family: "Lato", sans-serif}
 
 
 
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="group">
-  <h2 class="w3-wide">Group Members</h2>
+  <div class="w3-container w3-content w3-center w3-padding-64" id="group">
+  <div class="infoTitle">Our Team</div>
+  <div class="TeamCard"> 
+  <img src="img/team.jpg">
+  </div>
+
+
+  <div class="infoTitle">Team Members</div>
    <div class="TeammemberCard">
       <div class="Name">Wayne Hoac</div>
-      <img src="img/1.jpg">
+      <img src="img/1.JPG">
       <div class="Description">Wayne has had experiences ranging from mechanical design to software development and will be in charge of building and assembling the housing components along with any redesigning the housings if iterations are required after testing.  He will also work on mounting and testing all components to ensure they are functional and interface with each other, troubleshooting and debugging issues as they arise.</div>
       </div>
 
       <div class="TeammemberCard">
         <div class="Name">Ambrose Lau</div>
-        <img src="img/2.jpg">
+        <img src="img/2.JPG">
               <div class="Description">Ambrose has had several terms of experience programming iOS mobile applications and therefore will be in charge of creating the iOS companion app and helping with other programming related tasks such as coding on the OBD unit and helmet processor.</div>
       </div>
       <div class="TeammemberCard">
       <div class="Name">Chi-Yin (Ann) Lu</div>
-        <img src="img/3.jpg">
+        <img src="img/3.JPG">
               <div class="Description">Ann has several co-ops relating to IoT projects using the Raspberry Pi 2 and 3 along with other low voltage electrical components. She has also completed her most recent co-op as a project manager. She will be in charge for the electrical portion as well as the project management including sponsor searching.</div>
       </div>
       <div class="TeammemberCard">
       <div class="Name">Shing-Wah Truong</div>
-        <img src="img/4.jpg">
+        <img src="img/4.JPG">
               <div class="Description">Shing has worked several work terms in software development. He will be working alongside Ambrose to help code the various different parts of the HUD to allow each component to communicate with one another. He will also assist in debugging and setting up the electrical components of the HUD/OBD processing units.</div>
       </div>
       <div class="TeammemberCard">
       <div class="Name">Jize Wu</div>
-        <img src="img/5.jpg">
+        <img src="img/5.JPG">
               <div class="Description">Jize has developed his practical skills in mechanical design in various academic and personal projects. He has completed three mechanical related co-ops and has experience in 3D modelling as well as machine shop experience. As a result, Jize put most of his effort in mechanical element design, simulation, analysis and construction. He will also help on electrical element design and implementation in the future.</div>
       </div>
   
@@ -170,29 +193,6 @@ body {font-family: "Lato", sans-serif}
   
 <!-- End Page Content -->
 </div>
-<!-- Add Google Maps -->
-<div id="googleMap" style="height:400px;" class="w3-grayscale-max"></div>
-<script>
-function myMap() {
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
